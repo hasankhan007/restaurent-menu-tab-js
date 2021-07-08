@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f2f3f7;
+}
+
+#skltbsResponsive {
+    width: 1000px;
+    margin: 100px auto;
+    box-shadow: 0px 10px 30px 0px rgba(205, 205, 205, 0.33);
+    padding: 30px;
+    border-radius: 30px;
+}
+
+#skltbsResponsive h2 {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.skltbs-tab-group {
+    margin-bottom: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.food-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.single-items {
+    flex-basis: 290px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.item-content {
+    color: #fff;
+    position: relative;
+    z-index: 2;
+    padding: 30px 10px;
+    padding-bottom: 70px;
+    transform: scale(0);
+    transition: .3s;
+}
+
+.single-items:hover .item-content {
+    transform: scale(1);
+}
+
+.item-content::before {
+    position: absolute;
+    content: "";
+    background-color: #333;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    opacity: 0.75;
+}
+
+.item-content h4 {
+    text-transform: capitalize;
+    font-size: 30px;
+}
+
+.item-content span {
+    display: block;
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 25px;
+}
+
+.item-bottom {
+    background-color: #ff7720;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.item-bottom a {
+    color: #fff;
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+    border-right: 1px solid #ddd;
+}
+
+.item-bottom a:last-child {
+    border-right: 0;
+}
